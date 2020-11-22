@@ -1,2 +1,2 @@
 # national_park_rails_api
-Backend for National Park Adventure application
+Rails Backend for National Park Adventure application
