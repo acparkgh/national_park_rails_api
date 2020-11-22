@@ -1,0 +1,2 @@
+class ParkactivitiesController < ApplicationController
+end
