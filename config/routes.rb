@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
-  resources :mytrips
-  resources :users
-  resources :rails
+  
   namespace :api do
     namespace :v1 do
-      resources :parkactivities
-      resources :activities
+      resources :users
       resources :parks
+      resources :activities
+      resources :mytrips
+      resources :parkactivities
     end
   end
 end
