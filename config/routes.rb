@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       resources :activities
       resources :mytrips
       resources :parkactivities
+      resources :comments
     end
   end
 end

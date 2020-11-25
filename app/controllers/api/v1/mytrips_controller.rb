@@ -2,12 +2,12 @@ class Api::V1::MytripsController < ApplicationController
 
   def index
     @mytrips = Mytrip.all
-    render json: @mytrips.to_json
+    render json: @mytrips.to_json(include: [:comments])
   end
   
   def show
     @mytrip = Mytrip.find_by(id: params[:id])
-    render json: @mytrip
+    render json: @mytrip.to_json(include: [:comments])
   end
 
   def create
