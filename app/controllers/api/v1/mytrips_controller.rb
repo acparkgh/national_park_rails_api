@@ -21,6 +21,22 @@ class Api::V1::MytripsController < ApplicationController
     render json: @mytrip
   end
 
+  def update
+    # byebug
+    @mytrip = Mytrip.find_by(id: params[:id])
+    @mytrip.update(
+      mytrip_params(
+        :start_date, 
+        :end_date
+      )
+    )
+    render json: @mytrip
+  end
+
+
+
+
+
   private
 
     def mytrip_params(*args)
